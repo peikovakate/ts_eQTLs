@@ -11,7 +11,7 @@ do
         do
                 for lambda in 10 100 500 1000 1500
                 do
-                        bash sn_spMF/1_run_parameter_scope_search.sh ${K} ${alpha} ${lambda} ${iterations}
+                        sbatch sn_spMF/1_run_parameter_scope_search.sh ${K} ${alpha} ${lambda} ${iterations}
                 done
         done
 done
