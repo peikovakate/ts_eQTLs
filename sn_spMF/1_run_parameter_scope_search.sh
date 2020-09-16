@@ -1,9 +1,8 @@
 #!/bin/bash
-#SBATCH --time 12:00:00
+#SBATCH --time 7-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p main
-#SBATCH -t 12:00:00
 #SBATCH 
 
 
