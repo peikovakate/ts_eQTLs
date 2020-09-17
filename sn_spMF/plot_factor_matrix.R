@@ -15,7 +15,7 @@ gtex_col = gtex_col[order(gtex_col$tissue), ]
 ### plot the factor matrix
 plot_factor_matrix <- function(Factor_fn){
   factor_matrix = read.table(Factor_fn, sep='\t', stringsAsFactors = F, header = T, row.names = 1)
-  rownames(factor_matrix) = gsub('-', '', rownames(factor_matrix))
+  # rownames(factor_matrix) = gsub('-', '', rownames(factor_matrix))
   gtex_col = gtex_col %>% filter(tissue %in% rownames(factor_matrix))
 
   nF = ncol(factor_matrix)
