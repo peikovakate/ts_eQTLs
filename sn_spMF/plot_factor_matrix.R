@@ -72,7 +72,7 @@ plot_factor_matrix <- function(Factor_fn){
   
   save_fn = gsub('.txt', '.png', Factor_fn)
   png(save_fn, width = 30 * ncol(factor_matrix) + 30, 
-      height = 30 * nrow(factor_matrix), res = 300)
+      height = 30 * nrow(factor_matrix), res = 300, type = "cairo")
   print(fig_factor_matrix)
   dev.off()
 }
@@ -141,7 +141,7 @@ plot_factor <- function(Factor_fn, plot_panel_names = F){
   
   save_fn = gsub('.txt', '_factors.png', Factor_fn)
   png(save_fn, height = 180 * ceiling((ncol(factor_matrix)-1) / 4),
-      width = 600, res = 200)
+      width = 600, res = 200, type = "cairo")
   print(fig_factors)
   dev.off()
 }
