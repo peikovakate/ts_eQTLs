@@ -13,7 +13,7 @@ option_list = list(
 	make_option(c("-m", "--mappingDir"), type = "character", default='output/mapping/', help="output directory for the loadings", metavar="character"))
 
 opt = parse_args(OptionParser(option_list=option_list))
-dir.create(opt$mappingDir, showWarnings = F)
+dir.create(opt$mappingDir, showWarnings = F, recursive = T)
 
 
 FM_fn = opt$factorMname
@@ -49,7 +49,8 @@ FactorM = Data[[4]]
 B_correct = correct_B(X, W, B, FactorM)
 
 ## save results
-outFN = paste0('output/mapping/mapping_', FM_fn, '_Loadings_beta_alpha0.05_corrected.txt')
+# outFN = paste0('output/mapping/mapping_', FM_fn, '_Loadings_beta_alpha0.05_corrected.txt')
+outFN = file.path(opt$mappingDir, paste0(FM_fn, '_Loadings_beta_alpha0.05_corrected.txt'))
 print(outFN)
 write.table(B_correct, outFN, sep='\t', quote = F)
 
