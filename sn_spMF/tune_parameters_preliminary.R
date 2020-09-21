@@ -11,10 +11,12 @@ collect_results_preliminary <- function(outputdir, K, alpha1, lambda1){
         Fn = paste0('K', K, '_a1', alpha1, '_l1', lambda1);
         outputdir = file.path(outputdir, paste0('sn_spMF_', Fn));
 	outputFn = paste0(outputdir, '/sn_spMF_', Fn, '.RData');
-	load(outputFn);
-
-	return(c(K, alpha1, lambda1, ncol(FactorM), L_sparsity, F_sparsity))
-                                                                       
+	if(file.exists(outputFn)){
+	        load(outputFn);
+	        return(c(K, alpha1, lambda1, ncol(FactorM), L_sparsity, F_sparsity))
+	}else{
+	        return(NULL)
+	}
 }
 
 
