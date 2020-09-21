@@ -20,9 +20,9 @@ collect_results_preliminary <- function(outputdir, K, alpha1, lambda1){
 
 
 result = NULL
-for(K in c(10, 15, 20)){
-        for(alpha1 in c(1,10,100,500)){
-                for(lambda1 in c(1,10,100,500)){
+for(K in c(40,50)){
+        for(alpha1 in c(1000, 1200, 1400, 1500, 1700, 1900)){
+                for(lambda1 in c(1000, 1200, 1400, 1500, 1700, 1900)){
                         rowi = collect_results_preliminary(opt$outputdir, K, alpha1, lambda1)
                         if(!is.null(rowi)){
                                 result = rbind(result, rowi)
