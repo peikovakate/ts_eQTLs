@@ -3,7 +3,6 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH -p main
-#SBATCH 
 
 
 ### Search the appropriate range for alpha1 and lambda1
