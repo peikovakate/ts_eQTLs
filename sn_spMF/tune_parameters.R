@@ -9,10 +9,10 @@ opt = parse_args(OptionParser(option_list=option_list))
 
 
 result = NULL
-for(K in seq(10,20)){
-	for(alpha1 in seq(1,10)){
-		for(lambda1 in seq(1,10)){
-			rowi = collect_results(opt$outputdir, K, 10*alpha1, 10*lambda1)
+for(K in c(40, 45, 50, 55)){
+	for(alpha1 in c(900, 950, 1000, 1050, 1100, 1150, 1200)){
+		for(lambda1 in c(1000, 1050, 1100, 1150, 1450, 1500, 1550)){
+			rowi = collect_results(opt$outputdir, K, alpha1, lambda1)
 			if(!is.null(rowi)){
 				result = rbind(result, rowi)
 			}
