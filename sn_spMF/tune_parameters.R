@@ -9,9 +9,9 @@ opt = parse_args(OptionParser(option_list=option_list))
 
 
 result = NULL
-for(K in c(40, 45, 50, 55)){
-	for(alpha1 in c(900, 950, 1000, 1050, 1100, 1150, 1200)){
-		for(lambda1 in c(1000, 1050, 1100, 1150, 1450, 1500, 1550)){
+for(K in c(20, 25, 30, 40, 45, 50, 55)){
+	for(alpha1 in c(800, 900, 950, 1000, 1050, 1100, 1150, 1200)){
+		for(lambda1 in c(800, 900, 1200, 1000, 1050, 1100, 1150, 1450, 1500, 1550)){
 			rowi = collect_results(opt$outputdir, K, alpha1, lambda1)
 			if(!is.null(rowi)){
 				result = rbind(result, rowi)

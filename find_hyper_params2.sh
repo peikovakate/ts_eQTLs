@@ -1,4 +1,4 @@
-iterations=50
+iterations=20
 xf="../data/gtex/mfactorization/slope.txt"
 wf="../data/gtex/mfactorization/se.txt"
 od="../data/gtex/mfactorization/"
