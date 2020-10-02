@@ -52,7 +52,7 @@ one_fit <- function(x, w, FactorM, option){
 	colnames(dat_i) = c('X', paste0('F', seq(1, ncol(FactorMp))));
 
 	fit = penalized(response = X, penalized = dat_i[,paste0('F', seq(1,ncol(FactorMp)))], data=dat_i,
-					unpenalized = ~0, lambda1 = option[['alpha1']], lambda2=1e-10,
+					unpenalized = ~0, lambda1 = option[['alpha1']], lambda2=1e-5,
 					positive = F, standardize = F, trace = F);
 	l = coef(fit, 'all');
 	return(l)
