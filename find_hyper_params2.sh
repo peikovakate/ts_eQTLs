@@ -1,7 +1,7 @@
 iterations=50
 xf="../data/gtex/mfactorization/slope.txt"
 wf="../data/gtex/mfactorization/se.txt"
-od="../data/gtex/mfactorization/"
+od="../data/gtex/mfactorization2/"
 
 for K in 20 25 30
 do
