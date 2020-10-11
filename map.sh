@@ -11,7 +11,7 @@ M="$1"
 
 xf="../data/gtex/mfactorization/slope.txt"
 wf="../data/gtex/mfactorization/se.txt"
-od="../data/gtex/mfactorization/"
-mod="../data/gtex/mfactorization/mapping/"
+od="../data/gtex/mfactorization2/"
+mod="../data/gtex/mfactorization2/mapping/"
 
 Rscript mapping/lm.R -f $M -x ${xf} -w ${wf} -d ${od} -m ${mod}
